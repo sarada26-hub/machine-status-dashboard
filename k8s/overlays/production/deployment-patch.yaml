@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: machine-dashboard
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: machine-dashboard
+        image: machine-dashboard:latest 
+        imagePullPolicy: IfNotPresent
+        envFrom:
+        - configMapRef:
+            name: machine-dashboard-config
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"

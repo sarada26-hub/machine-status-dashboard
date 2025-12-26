@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: machine-dashboard-config
+  labels:
+    app: machine-dashboard
+data:
+  APP_TITLE: "Machine Status Dashboard"
+  ENVIRONMENT: "production"

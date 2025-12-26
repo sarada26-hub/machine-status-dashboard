@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+namePrefix: prod-
+
+patches:
+  - path: deployment-patch.yaml
+    target:
+      kind: Deployment
+      name: machine-dashboard
+  - path: service-patch.yaml
+    target:
+      kind: Service
+      name: machine-dashboard-service
+
+configMapGenerator:
+  - name: machine-dashboard-config
+    behavior: replace
+    literals:
+      - APP_TITLE=Production Machine Dashboard
+      - ENVIRONMENT=production

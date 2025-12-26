@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: machine-dashboard
+  labels:
+    app: machine-dashboard
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: machine-dashboard
+  template:
+    metadata:
+      labels:
+        app: machine-dashboard
+    spec:
+      containers:
+      - name: machine-dashboard
+        # image: machine-dashboard:latest  //for my check
+        # imagePullPolicy: IfNotPresent 
+        image: nginx:alpine 
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: machine-dashboard-config
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
