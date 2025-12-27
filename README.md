@@ -27,11 +27,11 @@
 ### Development
 ```bash
 # Clone and install
-git clone <repo-url>
-cd machine-dashboard
+git clone https://github.com/sarada26-hub/machine-status-dashboard.git
+cd machine-status-dashboard
 npm install
 
-# Start dev server
+# Start dev server 
 npm run dev
 # ➜ http://localhost:5173
 ```
