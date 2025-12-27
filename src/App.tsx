@@ -1,5 +1,5 @@
 import { AppProvider } from './context/AppContext';
-import { MachinesDashboard } from './components/MachinesDashboard';
+import { MachinesDashboard } from './pages/MachinesDashboard';
 
 function App() {
   return (

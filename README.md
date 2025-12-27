@@ -115,12 +115,17 @@ src/
 │   ├── Header/
 │   ├── MachineList/
 │   ├── MachineForm/
-│   └── FilterSearch/
+│   ├── FilterSearch/
+│   └── UndoNotification/
+├── pages/              # Page 
+   └── MachinesDashboard/
 ├── context/            # State management
 ├── hooks/              # Custom hooks
 ├── types/              # TypeScript types
 ├── utils/              # Helper functions
-└── services/           # Data services
+├── services/           # Data services
+├── data/               # Seed data
+└── constants/          # Application constants
 ```
 
 ### Key Design Patterns

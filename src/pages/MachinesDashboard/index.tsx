@@ -1,10 +1,10 @@
 import { useAppContext } from '../../context/AppContext';
 import { filterMachines } from '../../utils/machines';
-import { Header } from '../Header';
-import { UndoNotification } from '../UndoNotification';
-import { MachineList } from '../MachineList/index';
-import { MachineForm } from '../MachineForm';
-import { FilterSearch } from '../FilterSearch';
+import { Header } from '../../components/Header';
+import { UndoNotification } from '../../components/UndoNotification';
+import { MachineList } from '../../components/MachineList/index';
+import { MachineForm } from '../../components/MachineForm';
+import { FilterSearch } from '../../components/FilterSearch';
 
 export const MachinesDashboard = () => {
   const { state, dispatch } = useAppContext();
