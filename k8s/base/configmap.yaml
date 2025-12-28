@@ -5,5 +5,5 @@ metadata:
   labels:
     app: machine-dashboard
 data:
-  VITE_APP_TITLE: "Machine Status Dashboard"
+  APP_TITLE: "Machine Status Dashboard"
   ENVIRONMENT: "production"

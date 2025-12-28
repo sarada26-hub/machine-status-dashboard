@@ -20,5 +20,5 @@ configMapGenerator:
   - name: machine-dashboard-config
     behavior: replace
     literals:
-      - VITE_APP_TITLE=Production Machine Dashboard
+      - APP_TITLE=Production Machine Dashboard
       - ENVIRONMENT=production
