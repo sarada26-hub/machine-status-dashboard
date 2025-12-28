@@ -18,6 +18,24 @@
 - **Type Safety**: Full TypeScript implementation
 - **Cloud Ready**: Docker + Kubernetes deployment
 
+## 📸 Screenshots
+
+### Main Dashboard
+![Dashboard Overview](screenshots/dashboard-overview.png)
+*Main dashboard showing machine cards with status indicators*
+
+### Add/Edit Machine Form
+![Machine Form](screenshots/machine-form.png)
+*Form for adding or editing machine details*
+
+### Filter and Search
+![Filter Search](screenshots/filter-search.png)
+*Live filtering by status and search functionality*
+
+### Undo Functionality
+![Undo Delete](screenshots/undo-delete.png)
+*Undo notification after machine deletion*
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -60,7 +78,7 @@ kubectl apply -k k8s/overlays/production/
 ```
 
 **Access URLs:**
-- Development: `http://<node-ip>:30080`
+- Base: `http://<node-ip>:30081`
 - Production: `http://<node-ip>:30081`
 
 ## Kubernetes Deployment
@@ -91,7 +109,7 @@ kubectl apply -k k8s/overlays/production/
 ```
 
 ### Access the Application
-- **Base**: http://\<node-ip\>:30080
+- **Base**: http://\<node-ip\>:30081
 - **Production**: http://\<node-ip\>:30081
 - **Local cluster**: Use port forwarding for local access
 
@@ -133,6 +151,16 @@ src/
 - **Custom Hooks**: Reusable logic extraction
 - **Service Layer**: Data persistence abstraction
 - **Type Safety**: Strict TypeScript throughout
+
+## 📊 Assumptions and Shortcuts Taken
+
+- **No Backend**: Using localStorage for data persistence instead of a real API
+- **Simple Validation**: Basic client-side validation only (name length, required fields)
+- **No Authentication**: No user management or access control implemented
+- **Basic Error Handling**: Minimal error states and user feedback
+- **Simple Kubernetes Setup**: Basic manifests without advanced features like health checks, resource limits, or ingress
+- **No Real-time Updates**: Data updates only when user interacts with the app
+- **Seed Data**: Hardcoded sample machines for initial app state
 
 ## 📊 Current Limitations
 
